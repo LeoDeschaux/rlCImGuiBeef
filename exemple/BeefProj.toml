@@ -1,0 +1,9 @@
+FileVersion = 1
+Dependencies = {corlib = "*", raylib-beef = "*", rlCImGuiBeef = "*", ImGui = "*"}
+
+[Project]
+Name = "example"
+StartupObject = "example.Program"
+
+[Configs.Debug.Win64]
+BeefLibType = "DynamicDebug"

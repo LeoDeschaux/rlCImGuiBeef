@@ -1,0 +1,10 @@
+FileVersion = 1
+Dependencies = {corlib = "*", raylib-beef = "*", corlib = "*", corlib = "*", ImGui = "*"}
+
+[Project]
+Name = "rlCImGuiBeef"
+TargetType = "BeefLib"
+StartupObject = "exemple.Program"
+
+[Configs.Debug.Win64]
+LibPaths = ["$(ProjectDir)/dist/rlcimgui.lib"]
