@@ -1,7 +1,7 @@
 FileVersion = 1
 LastConfig = "Debug"
 LastPlatform = "Win64"
-RecentFilesList = ["exemple\\src\\Program.bf", "src\\rlCImGuiBeef.bf", "src\\rlCImGuiBeef.bf", "Disassembly", "Disassembly", "Disassembly", "Disassembly"]
+RecentFilesList = ["src\\rlCImGuiBeef.bf", "src\\rlCImGuiBeef.bf", "exemple\\src\\Program.bf", "Disassembly", "Disassembly", "Disassembly", "Disassembly"]
 
 [MainWindow]
 X = 0
@@ -43,24 +43,24 @@ DefaultDocumentsTabbedView = true
 Type = "TabbedView"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-Active = true
 TabLabel = "Program.bf"
 TabWidth = 92.76598
 TabIsPinned = false
 Type = "SourceViewPanel"
 FilePath = "exemple\\src\\Program.bf"
-CursorPos = 961
-VertPos = 611.9584
+CursorPos = 876
+VertPos = 542.2917
 ProjectName = "example"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+Active = true
 TabLabel = "rlCImGuiBeef.bf"
 TabWidth = 117.2341
 TabIsPinned = false
 Type = "SourceViewPanel"
 FilePath = "src\\rlCImGuiBeef.bf"
-CursorPos = 1069
-VertPos = 1796.292
+CursorPos = 2586
+VertPos = 1575.505
 ProjectName = "rlCImGuiBeef"
 
 [[MainDockingFrame.DockedWidgets]]

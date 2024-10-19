@@ -38,7 +38,6 @@ class Program
 			EndDrawing();
 			*/
 
-			
 			BeginDrawing();
 			ClearBackground(RAYWHITE);
 			DrawCircle(GetMouseX(), GetMouseY(), 8, RED);
@@ -46,7 +45,7 @@ class Program
 			EndMode3D();
 
 			rlCImGuiBeef.rlCImGuiBegin();
-			bool open = true;
+			//bool open = true;
 			ImGui.ShowDemoWindow(&open);
 			rlCImGuiBeef.rlCImGuiEnd();
 

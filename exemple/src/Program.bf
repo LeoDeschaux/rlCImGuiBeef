@@ -38,7 +38,6 @@ class Program
 			EndDrawing();
 			*/
 
-			
 			BeginDrawing();
 			ClearBackground(RAYWHITE);
 			DrawCircle(GetMouseX(), GetMouseY(), 8, RED);
