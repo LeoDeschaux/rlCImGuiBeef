@@ -4,7 +4,7 @@ LastPlatform = "Win64"
 RecentFilesList = ["src\\Program.bf", "d:\\Programming\\Beef\\rlImGuiBeef\\src\\rlImGuiBeef.bf", "d:\\Programming\\Cpp\\Raylib\\rlImGui\\rlImGui.cpp", "Disassembly"]
 
 [MainWindow]
-X = 589
+X = 742
 Y = 0
 Width = 1178
 Height = 884
@@ -69,18 +69,16 @@ TabWidth = 92.76598
 TabIsPinned = false
 Type = "SourceViewPanel"
 FilePath = "src\\Program.bf"
-CursorPos = 1012
-VertPos = 641.0467
+CursorPos = 481
 ProjectName = "example"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "rlImGui.cpp"
-TabWidth = 104.2553
+TabWidth = 94.89364
 TabIsPinned = false
 Type = "SourceViewPanel"
 FilePath = "d:\\Programming\\Cpp\\Raylib\\rlImGui\\rlImGui.cpp"
 CursorPos = 14959
-VertPos = 8056.0
 
 [[MainDockingFrame.DockedWidgets]]
 RequestedWidth = 250.0

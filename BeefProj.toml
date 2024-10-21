@@ -7,4 +7,28 @@ TargetType = "BeefLib"
 StartupObject = "exemple.Program"
 
 [Configs.Debug.Win64]
-LibPaths = ["$(ProjectDir)/dist/rlcimgui.lib"]
+LibPaths = ["$(ProjectDir)/lib/$(Platform)/rlcimgui.lib"]
+
+[Configs.Debug.Win32]
+LibPaths = ["$(ProjectDir)/lib/$(Platform)/rlcimgui.lib"]
+
+[Configs.Debug.wasm32]
+LibPaths = ["$(ProjectDir)/lib/wasm/librlcimgui.a"]
+
+[Configs.Release.Win32]
+LibPaths = ["$(ProjectDir)/lib/$(Platform)/rlcimgui.lib"]
+
+[Configs.Release.Win64]
+LibPaths = ["$(ProjectDir)/lib/$(Platform)/rlcimgui.lib"]
+
+[Configs.Paranoid.Win32]
+LibPaths = ["$(ProjectDir)/lib/$(Platform)/rlcimgui.lib"]
+
+[Configs.Paranoid.Win64]
+LibPaths = ["$(ProjectDir)/lib/$(Platform)/rlcimgui.lib"]
+
+[Configs.Test.Win32]
+LibPaths = ["$(ProjectDir)/lib/$(Platform)/rlcimgui.lib"]
+
+[Configs.Test.Win64]
+LibPaths = ["$(ProjectDir)/lib/$(Platform)/rlcimgui.lib"]
