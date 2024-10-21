@@ -1,7 +1,7 @@
 FileVersion = 1
 LastConfig = "Debug"
 LastPlatform = "wasm32"
-RecentFilesList = ["exemple\\src\\Program.bf", "src\\rlCImGuiBeef.bf", "src\\rlCImGuiBeef.bf", "Disassembly", "Disassembly", "Disassembly", "Disassembly"]
+RecentFilesList = ["example\\src\\Program.bf", "src\\rlCImGuiBeef.bf", "src\\rlCImGuiBeef.bf", "exemple\\src\\Program.bf", "Disassembly", "Disassembly", "Disassembly", "Disassembly"]
 
 [MainWindow]
 X = 0
@@ -43,23 +43,24 @@ DefaultDocumentsTabbedView = true
 Type = "TabbedView"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-Active = true
-TabLabel = "Program.bf"
-TabWidth = 92.76598
-TabIsPinned = false
-Type = "SourceViewPanel"
-FilePath = "exemple\\src\\Program.bf"
-CursorPos = 382
-ProjectName = "example"
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "rlCImGuiBeef.bf"
 TabWidth = 117.2341
 TabIsPinned = false
 Type = "SourceViewPanel"
 FilePath = "src\\rlCImGuiBeef.bf"
-CursorPos = 2685
+CursorPos = 106
 ProjectName = "rlCImGuiBeef"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+Active = true
+TabLabel = "Program.bf"
+TabWidth = 92.76598
+TabIsPinned = false
+Type = "SourceViewPanel"
+FilePath = "example\\src\\Program.bf"
+CursorPos = 555
+VertPos = 60.95834
+ProjectName = "example"
 
 [[MainDockingFrame.DockedWidgets]]
 RequestedWidth = 250.0

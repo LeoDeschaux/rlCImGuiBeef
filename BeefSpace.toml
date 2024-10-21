@@ -1,5 +1,5 @@
 FileVersion = 1
-Projects = {raylib-beef = "*", exemple = {Path = "exemple"}, rlCImGuiBeef = {Path = "."}, ImGui = "*"}
+Projects = {raylib-beef = "*", rlCImGuiBeef = {Path = "."}, ImGui = "*", example = {Path = "example"}}
 ExtraPlatforms = ["wasm32"]
 
 [Workspace]

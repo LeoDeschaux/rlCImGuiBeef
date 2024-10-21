@@ -1,0 +1,45 @@
+FileVersion = 1
+Dependencies = {corlib = "*", raylib-beef = "*", rlCImGuiBeef = "*", ImGui = "*"}
+
+[Project]
+Name = "example"
+StartupObject = "example.Program"
+
+[Configs.Debug.Win64]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+BeefLibType = "DynamicDebug"
+
+[Configs.Debug.Win32]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+BeefLibType = "DynamicDebug"
+
+[Configs.Debug.wasm32]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+OtherLinkFlags = "$(LinkFlags) -o index.html -sASYNCIFY=1 --use-preload-plugins -s INITIAL_MEMORY=67108864 -s ALLOW_MEMORY_GROWTH=1 -s ASSERTIONS=1 -s SAFE_HEAP=0 -s DETERMINISTIC=1"
+
+[Configs.Release.Win32]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+
+[Configs.Release.Win64]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+
+[Configs.Release.wasm32]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+
+[Configs.Paranoid.Win32]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+
+[Configs.Paranoid.Win64]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+
+[Configs.Paranoid.wasm32]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+
+[Configs.Test.Win32]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+
+[Configs.Test.Win64]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
+
+[Configs.Test.wasm32]
+TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"
