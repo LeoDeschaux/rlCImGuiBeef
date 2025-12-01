@@ -42,6 +42,16 @@ SizePriority = 150.0
 DefaultDocumentsTabbedView = true
 Type = "TabbedView"
 
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+Active = true
+TabLabel = "ImGuiRaylibExtension.bf"
+TabWidth = 175.532
+TabIsPinned = false
+Type = "SourceViewPanel"
+FilePath = "src\\ImGuiRaylibExtension.bf"
+CursorPos = 463
+ProjectName = "rlCImGuiBeef"
+
 [[MainDockingFrame.DockedWidgets]]
 RequestedWidth = 250.0
 RequestedHeight = 330.0

@@ -36,7 +36,7 @@ Type = "TabbedView"
 [[MainDockingFrame.DockedWidgets.DockedWidgets.DockedWidgets.Tabs]]
 Active = true
 TabLabel = "Workspace"
-TabWidth = 111.7021
+TabWidth = 109.8215
 TabIsPinned = false
 Type = "ProjectPanel"
 
@@ -49,7 +49,7 @@ Type = "TabbedView"
 [[MainDockingFrame.DockedWidgets.DockedWidgets.DockedWidgets.Tabs]]
 Active = true
 TabLabel = "Autocomplete"
-TabWidth = 129.7872
+TabWidth = 126.7859
 TabIsPinned = false
 Type = "AutoCompletePanel"
 
@@ -65,17 +65,17 @@ Type = "TabbedView"
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 Active = true
 TabLabel = "Program.bf"
-TabWidth = 92.76598
+TabWidth = 90.71439
 TabIsPinned = false
 Type = "SourceViewPanel"
 FilePath = "src\\Program.bf"
-CursorPos = 522
-VertPos = 111.625
+CursorPos = 133
+VertPos = 230.0
 ProjectName = "example"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "rlImGui.cpp"
-TabWidth = 94.89364
+TabWidth = 92.50011
 TabIsPinned = false
 Type = "SourceViewPanel"
 FilePath = "d:\\Programming\\Cpp\\Raylib\\rlImGui\\rlImGui.cpp"
@@ -83,106 +83,87 @@ CursorPos = 14959
 
 [[MainDockingFrame.DockedWidgets]]
 RequestedWidth = 250.0
-RequestedHeight = 319.0
-Type = "DockingFrame"
-SplitType = 1
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets]]
-RequestedWidth = 250.0
-RequestedHeight = 319.0
+RequestedHeight = 234.0
 SizePriority = 1920.0
 Type = "TabbedView"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-Active = true
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Output"
-TabWidth = 90.42554
+TabWidth = 90.17864
 TabIsPinned = false
 Type = "OutputPanel"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Errors"
-TabWidth = 81.9149
+TabWidth = 82.14291
 TabIsPinned = false
 Type = "ErrorsPanel"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Modules"
-TabWidth = 98.93618
+TabWidth = 97.32152
 TabIsPinned = false
 Type = "ModulePanel"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Threads"
-TabWidth = 93.61703
+TabWidth = 92.85722
 TabIsPinned = false
 Type = "ThreadPanel"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Profile"
-TabWidth = 86.17022
+TabWidth = 83.92863
 TabIsPinned = false
 Type = "ProfilePanel"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Bookmarks"
-TabWidth = 111.7021
+TabWidth = 110.7144
 TabIsPinned = false
 Type = "BookmarksPanel"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Breakpoints"
-TabWidth = 115.9575
+TabWidth = 114.2858
 TabIsPinned = false
 Type = "BreakpointPanel"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Find Results"
-TabWidth = 117.0213
+TabWidth = 115.1787
 TabIsPinned = false
 Type = "FindResultsPanel"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
+Active = true
 TabLabel = "Immediate"
-TabWidth = 108.5107
+TabWidth = 108.0358
 TabIsPinned = false
 Type = "ImmediatePanel"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Memory"
-TabWidth = 96.80852
+TabWidth = 96.42866
 TabIsPinned = false
 Type = "MemoryPanel"
 AutoResize = "Auto_Mul8"
 RequestedWidth = 300.0
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Watch"
-TabWidth = 86.17022
+TabWidth = 84.8215
 TabIsPinned = false
 Type = "WatchPanel"
 Columns = [{Width = 200.0}, {Width = 200.0}, {Width = 200.0}]
 Items = [""]
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Auto Watches"
-TabWidth = 128.7234
+TabWidth = 126.7859
 TabIsPinned = false
 Type = "AutoWatchPanel"
 Columns = [{Width = 200.0}, {Width = 200.0}, {Width = 200.0}]
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets]]
-RequestedWidth = 318.0
-RequestedHeight = 415.24
-SizePriority = 1920.0
-Type = "TabbedView"
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-Active = true
-TabLabel = "Call Stack"
-TabWidth = 103.1915
-TabIsPinned = false
-Type = "CallStackPanel"
 
 [[BookmarkFolders]]
 Title = ""

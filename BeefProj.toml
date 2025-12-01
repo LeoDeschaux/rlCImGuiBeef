@@ -1,5 +1,5 @@
 FileVersion = 1
-Dependencies = {corlib = "*", raylib-beef = "*", corlib = "*", corlib = "*", corlib = "*", ImGui = "*"}
+Dependencies = {corlib = "*", corlib = "*", corlib = "*", corlib = "*", ImGui = "*", corlib = "*", raylib-beef = "*"}
 
 [Project]
 Name = "rlCImGuiBeef"

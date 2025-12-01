@@ -49,8 +49,29 @@ public static class rlCImGuiBeef
 	[CLink]
 	public static extern void testDemo();
 
+	/**
+	 * Draw a portion texture as an image in an ImGui Context at a defined size
+	 * Uses the current ImGui Cursor position and the specified size
+	 * The image will be scaled up or down to fit as needed
+	 *
+	 * @param image The raylib texture to draw
+	 * @param destWidth The width of the drawn image
+	 * @param destHeight The height of the drawn image
+	 * @param sourceRect The portion of the texture to draw as an image. Negative values for the width and height will flip the image
+	 */
+	[CLink]
+	public static extern void rligImageRect(Texture* image, int destWidth, int destHeight, Rectangle sourceRect);
 
 
+	/**
+	 * Draws a texture as an image button in an ImGui context. Uses the current ImGui cursor position and the full size of the texture
+	 *
+	 * @param name The display name and ImGui ID for the button
+	 * @param image The texture to draw
+	 * @return True if the button was clicked
+	 */
+	[CLink]
+	public static extern bool rligImageButton(char8* name, Texture* image);
 
 
 
