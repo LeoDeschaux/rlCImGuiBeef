@@ -6,6 +6,22 @@ namespace ImGui;
 
 public extension ImGui
 {
+	public static bool SliderFloatWithSteps(char* label, float* v, float v_min, float v_max, float v_step, char* display_format = "%.3f")
+	{
+		char[64] text_buf = .();
+		ImFormatString(&text_buf, 64, display_format, *v);
+
+		// Map from [v_min,v_max] to [0,N]
+		int countValues = (int)((v_max-v_min)/v_step);
+		int v_i = int((*v - v_min)/v_step);
+		bool value_changed = SliderInt(label, (int32*)&v_i, 0, (int32)countValues, scope $"{*v}");
+
+		// Remap from [0,N] to [v_min,v_max]
+		*v = v_min + float(v_i) * v_step;
+		return value_changed;
+	}
+
+
 	public static bool SliderFloat2(char* label, ref Vector2 vector, float v_min, float v_max, char* format = "%.3f", SliderFlags flags = (SliderFlags) 0)
 	{
 		float[2] v;

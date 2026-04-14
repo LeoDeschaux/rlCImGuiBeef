@@ -1,11 +1,11 @@
 FileVersion = 1
 LastConfig = "Debug"
-LastPlatform = "wasm32"
+LastPlatform = "Win64"
 RecentFilesList = ["src\\ImGuiRaylibExtension.bf", "src\\rlCImGuiBeef.bf", "exemple\\src\\Program.bf", "Disassembly", "Disassembly", "Disassembly", "Disassembly"]
 
 [MainWindow]
 X = 0
-Y = 156
+Y = 148
 Width = 1178
 Height = 884
 ShowKind = "ShowMaximized"
@@ -29,7 +29,7 @@ Type = "TabbedView"
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 Active = true
 TabLabel = "Workspace"
-TabWidth = 111.7021
+TabWidth = 111.7023
 TabIsPinned = false
 Type = "ProjectPanel"
 
@@ -45,7 +45,7 @@ Type = "TabbedView"
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 Active = true
 TabLabel = "ImGuiRaylibExtension.bf"
-TabWidth = 175.532
+TabWidth = 166.1706
 TabIsPinned = false
 Type = "SourceViewPanel"
 FilePath = "src\\ImGuiRaylibExtension.bf"
@@ -66,7 +66,7 @@ Type = "TabbedView"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Memory"
-TabWidth = 96.80852
+TabWidth = 96.80864
 TabIsPinned = false
 Type = "MemoryPanel"
 AutoResize = "Auto_Mul8"
@@ -75,22 +75,27 @@ RequestedWidth = 300.0
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 Active = true
 TabLabel = "Watch"
-TabWidth = 86.17022
+TabWidth = 86.17031
 TabIsPinned = false
 Type = "WatchPanel"
 Columns = [{Width = 200.0}, {Width = 200.0}, {Width = 200.0}]
-Items = ["GetDrawData", ""]
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs.Items]]
+EvalStr = "GetDrawData"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs.Items]]
+EvalStr = ""
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Auto"
-TabWidth = 77.65958
+TabWidth = 77.65965
 TabIsPinned = false
 Type = "AutoWatchPanel"
 Columns = [{Width = 200.0}, {Width = 200.0}, {Width = 200.0}]
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Profile"
-TabWidth = 86.17022
+TabWidth = 86.17031
 TabIsPinned = false
 Type = "ProfilePanel"
 
@@ -102,32 +107,32 @@ Type = "TabbedView"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Threads"
-TabWidth = 93.61703
+TabWidth = 93.61714
 TabIsPinned = false
 Type = "ThreadPanel"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Call Stack"
-TabWidth = 103.1915
+TabWidth = 103.1916
 TabIsPinned = false
 Type = "CallStackPanel"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Immediate"
-TabWidth = 108.5107
+TabWidth = 108.5108
 TabIsPinned = false
 Type = "ImmediatePanel"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 Active = true
 TabLabel = "Output"
-TabWidth = 90.42554
+TabWidth = 90.42564
 TabIsPinned = false
 Type = "OutputPanel"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 TabLabel = "Find Results"
-TabWidth = 117.0213
+TabWidth = 117.0215
 TabIsPinned = false
 Type = "FindResultsPanel"
 
