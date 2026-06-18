@@ -1,9 +1,14 @@
 FileVersion = 1
-Dependencies = {corlib = "*", raylib-beef = "*", rlCImGuiBeef = "*", ImGui = "*"}
 
 [Project]
 Name = "example"
 StartupObject = "example.Program"
+
+[Dependencies]
+corlib = "*"
+raylib-beef = "*"
+rlCImGuiBeef = "*"
+ImGui = "*"
 
 [Configs.Debug.Win64]
 TargetDirectory = "$(ProjectDir)/dist/$(Platform)_$(Configuration)"

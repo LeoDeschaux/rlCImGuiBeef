@@ -79,7 +79,8 @@ public static class rlCImGuiBeef
 	{
 		// Setup Dear ImGui context
 		ImGui.CreateContext(null);
-		ImGui.IO *ioptr = ImGui.GetIO();
+		//ImGui.IO *ioptr = ImGui.GetIO();
+		ImGui.IO *ioptr = ImGui.GetIO_Nil();
 		ioptr.ConfigFlags |= ImGui.ConfigFlags.NavEnableKeyboard; // Enable Keyboard Controls
 		ioptr.ConfigFlags |= ImGui.ConfigFlags.NavEnableGamepad;  // Enable Gamepad Controls
 
@@ -90,8 +91,10 @@ public static class rlCImGuiBeef
 		ImGui_ImplRaylib_Init();
 
 		//ImFontAtlas_AddFontDefault(ioptr.Fonts, null);
-		ioptr.Fonts.AddFontDefault();
-		rligSetupFontAwesome();
+
+		//TODO
+		//ioptr.Fonts.AddFontDefault();
+		//rligSetupFontAwesome();
 
 		// required to be called to cache the font texture with raylib
 		ImGui_ImplRaylib_BuildFontAtlas();

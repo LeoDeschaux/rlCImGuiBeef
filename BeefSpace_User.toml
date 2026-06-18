@@ -1,7 +1,7 @@
 FileVersion = 1
 LastConfig = "Debug"
 LastPlatform = "Win64"
-RecentFilesList = ["src\\ImGuiRaylibExtension.bf", "src\\rlCImGuiBeef.bf", "exemple\\src\\Program.bf", "Disassembly", "Disassembly", "Disassembly", "Disassembly"]
+RecentFilesList = ["src\\rlCImGuiBeef.bf", "d:\\Software\\Beef\\BeefLibs\\imgui-beef-quandini-docking\\src\\ImGui.bf", "src\\ImGuiRaylibExtension.bf", "example\\src\\Program.bf", "exemple\\src\\Program.bf", "Disassembly", "Disassembly", "Disassembly", "Disassembly"]
 
 [MainWindow]
 X = 0
@@ -29,7 +29,7 @@ Type = "TabbedView"
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
 Active = true
 TabLabel = "Workspace"
-TabWidth = 111.7023
+TabWidth = 110.9091
 TabIsPinned = false
 Type = "ProjectPanel"
 
@@ -43,98 +43,68 @@ DefaultDocumentsTabbedView = true
 Type = "TabbedView"
 
 [[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-Active = true
 TabLabel = "ImGuiRaylibExtension.bf"
-TabWidth = 166.1706
+TabWidth = 162.7273
 TabIsPinned = false
 Type = "SourceViewPanel"
 FilePath = "src\\ImGuiRaylibExtension.bf"
-CursorPos = 463
+CursorPos = 3584
+VertPos = 2872.2
+ProjectName = "rlCImGuiBeef"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+TabLabel = "Program.bf"
+TabWidth = 91.81818
+TabIsPinned = false
+Type = "SourceViewPanel"
+FilePath = "example\\src\\Program.bf"
+CursorPos = 356
+ProjectName = "example"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+TabLabel = "ImGui.bf"
+TabWidth = 77.27273
+TabIsPinned = false
+Type = "SourceViewPanel"
+FilePath = "d:\\Software\\Beef\\BeefLibs\\imgui-beef-quandini-docking\\src\\ImGui.bf"
+CursorPos = 335173
+VertPos = 169730.0
+ProjectName = "ImGui"
+
+[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+Active = true
+TabLabel = "rlCImGuiBeef.bf"
+TabWidth = 116.3636
+TabIsPinned = false
+Type = "SourceViewPanel"
+FilePath = "src\\rlCImGuiBeef.bf"
+CursorPos = 2532
+VertPos = 1760.0
 ProjectName = "rlCImGuiBeef"
 
 [[MainDockingFrame.DockedWidgets]]
 RequestedWidth = 250.0
-RequestedHeight = 330.0
-Type = "DockingFrame"
-SplitType = 1
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets]]
-RequestedWidth = 250.0
-RequestedHeight = 250.0
-SizePriority = 0.3213542
+RequestedHeight = 644.0
 Type = "TabbedView"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-TabLabel = "Memory"
-TabWidth = 96.80864
-TabIsPinned = false
-Type = "MemoryPanel"
-AutoResize = "Auto_Mul8"
-RequestedWidth = 300.0
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-Active = true
-TabLabel = "Watch"
-TabWidth = 86.17031
-TabIsPinned = false
-Type = "WatchPanel"
-Columns = [{Width = 200.0}, {Width = 200.0}, {Width = 200.0}]
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs.Items]]
-EvalStr = "GetDrawData"
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs.Items]]
-EvalStr = ""
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-TabLabel = "Auto"
-TabWidth = 77.65965
-TabIsPinned = false
-Type = "AutoWatchPanel"
-Columns = [{Width = 200.0}, {Width = 200.0}, {Width = 200.0}]
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-TabLabel = "Profile"
-TabWidth = 86.17031
-TabIsPinned = false
-Type = "ProfilePanel"
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets]]
-RequestedWidth = 250.0
-RequestedHeight = 250.0
-SizePriority = 0.6786458
-Type = "TabbedView"
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-TabLabel = "Threads"
-TabWidth = 93.61714
-TabIsPinned = false
-Type = "ThreadPanel"
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-TabLabel = "Call Stack"
-TabWidth = 103.1916
-TabIsPinned = false
-Type = "CallStackPanel"
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
-TabLabel = "Immediate"
-TabWidth = 108.5108
-TabIsPinned = false
-Type = "ImmediatePanel"
-
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 Active = true
 TabLabel = "Output"
-TabWidth = 90.42564
+TabWidth = 90.90909
 TabIsPinned = false
 Type = "OutputPanel"
 
-[[MainDockingFrame.DockedWidgets.DockedWidgets.Tabs]]
+[[MainDockingFrame.DockedWidgets.Tabs]]
 TabLabel = "Find Results"
-TabWidth = 117.0215
+TabWidth = 116.3636
 TabIsPinned = false
 Type = "FindResultsPanel"
+
+[[MainDockingFrame.DockedWidgets.Tabs]]
+TabLabel = "Call Stack"
+TabWidth = 102.7273
+TabIsPinned = false
+Type = "CallStackPanel"
 
 [[Breakpoints]]
 Symbol = "ImGuiRenderTriangles"

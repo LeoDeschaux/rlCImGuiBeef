@@ -1,11 +1,26 @@
 using RaylibBeef;
 
+using RaylibBeef;
+using System.Collections;
+using static RaylibBeef.Raylib;
+using static RaylibBeef.Rlgl;
+using static RaylibBeef.Color;
+
 using System;
 
 namespace ImGui;
 
 public extension ImGui
 {
+	public static IO* GetIO_Nil() => GetIO();
+
+	public static TextureRef RaylibTextureToImGuiTextureRef(Texture* texture)
+	{
+		var tex = ImGui.TextureRef();
+		tex._TexID = (ImGui.TextureID)(System.Interop.c_uintptr)(void*)texture;
+		return tex;
+	}
+
 	public static bool SliderFloatWithSteps(char* label, float* v, float v_min, float v_max, float v_step, char* display_format = "%.3f")
 	{
 		char[64] text_buf = .();
@@ -110,18 +125,20 @@ public extension ImGui
 		return result;
 	}
 
-	public static void InputText(String label, String outStrs, int maxBufferSize = 255)
+	public static bool InputText(String label, String outStrs, int maxBufferSize = 255, ImGui.InputTextFlags flags = 0)
 	{
 		char8* buffer = new char8[maxBufferSize]*;
 		for(int i = 0; i < maxBufferSize-1 && i < outStrs.Length; i++)
 			buffer[i] = outStrs[i];
 
-		ImGui.InputText(label, buffer, (uint64)maxBufferSize);
+		bool res = ImGui.InputText(label, buffer, (uint64)maxBufferSize, flags);
 
 		outStrs.Clear();
 		outStrs.Append(buffer);
 
 		delete buffer;
+
+		return res;
 	}
 
 	public static void InputTextMultiline(String label, String outStrs, int maxBufferSize = 255)
@@ -153,5 +170,102 @@ public extension ImGui
 		*/
 
 		return hoverRes;
+	}
+
+	struct ColoredGroupContext
+	{
+	    public ImGui.DrawListSplitter Splitter;
+	    public ImGui.DrawList* DrawList;
+	    public Vector2 Min;
+	    public Vector2 Max;
+		public Color Color;
+	}
+
+	static List<ColoredGroupContext> sGroupStack = new .() ~ delete _;
+
+	public static void BeginColoredGroup(Color color)
+	{
+		var context = ColoredGroupContext();
+
+		context.Color = color;
+		context.DrawList = ImGui.GetWindowDrawList();
+		context.Splitter.Split(context.DrawList, 2);
+
+		context.Splitter.SetCurrentChannel(context.DrawList, 1);
+
+		context.Min = ImGui.GetCursorScreenPos();
+
+		ImGui.PushStyleColor(.Header, .(0, 0, 0, 0));
+		ImGui.PushStyleColor(.Border, .(255, 255, 255, 255));
+		ImGui.PushStyleColor(.Text, .(255, 255, 255, 255));
+		ImGui.PushStyleColor(.HeaderHovered, .(0,0,0,0));
+		ImGui.PushStyleColor(.HeaderActive, .(0,0,0,0));
+
+		context.Max.x = ImGui.GetWindowPos().x + ImGui.GetContentRegionAvail().x;
+
+		sGroupStack.AddFront(context);
+
+		ImGui.BeginGroup();
+	}
+
+	public static void EndColoredGroup()
+	{
+		var context = sGroupStack.PopFront();
+
+		ImGui.PopStyleColor(5);
+
+		context.Max.y = ImGui.GetItemRectMax().y;
+
+		context.Splitter.SetCurrentChannel(context.DrawList, 0);
+
+		//var color = ImGui.GetColorU32(context == 0 ? .(0.30f, 0.1f, 0.1f, 0.7f) : .(0.30f, 0.30f, 0.1f, 0.7f));
+
+		context.DrawList.AddRectFilled(context.Min, context.Max, ImGui.GetColorU32(context.Color.Value));
+		context.Splitter.Merge(context.DrawList);
+
+		ImGui.EndGroup();
+	}
+}
+
+namespace RaylibBeef;
+
+public extension Raylib
+{
+	public static ImGui.ImGui.Color RayToImGuiColor(RaylibBeef.Color rayColor) {
+		return .(rayColor.r/255f,rayColor.g/255f,rayColor.b/255f,rayColor.a/255f);
+	}
+
+	public static uint32 RayToImGuiColorU32(RaylibBeef.Color rayColor) {
+		return ImGui.ImGui.GetColorU32(.(rayColor.r/255f,rayColor.g/255f,rayColor.b/255f,rayColor.a/255f));
+	}
+
+	public static Color ImGuiToRayColor(ImGui.ImGui.Vec4 col) {
+		return .((uint8)col.x,(uint8)col.y,(uint8)col.z,(uint8)col.w);
+	}
+}
+
+extension Color
+{
+	public static operator Color(ImGui.ImGui.Vec4 val)
+	{
+		return ImGuiToRayColor(val);
+	}
+
+	public static operator ImGui.ImGui.Vec4(Color val)
+	{
+		return RayToImGuiColor(val).Value;
+	}
+}
+
+extension Vector2
+{
+	public static operator Vector2(ImGui.ImGui.Vec2 val)
+	{
+		return Vector2(val.x, val.y);
+	}
+
+	public static operator ImGui.ImGui.Vec2(Vector2 val)
+	{
+		return ImGui.ImGui.Vec2(val.x, val.y);
 	}
 }
