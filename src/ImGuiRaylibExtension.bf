@@ -14,6 +14,23 @@ public extension ImGui
 {
 	public static IO* GetIO_Nil() => GetIO();
 
+	public static void PushFontScale(float scale)
+	{
+		var io = ImGui.GetIO_Nil();
+		if(io.FontDefault != null)
+		{
+			ImGui.PushFont(null, ImGui.GetFontSize()*scale);
+			//ImGui.PushFont(io.FontDefault, io.FontDefault.LegacySize*scale);
+		}
+	}
+
+	public static void PopFontSize()
+	{
+		var io = ImGui.GetIO_Nil();
+		if(io.FontDefault != null)
+			ImGui.PopFont();
+	}
+
 	public static TextureRef RaylibTextureToImGuiTextureRef(Texture* texture)
 	{
 		var tex = ImGui.TextureRef();
@@ -214,16 +231,30 @@ public extension ImGui
 
 		ImGui.PopStyleColor(5);
 
-		context.Max.y = ImGui.GetItemRectMax().y;
+		ImGui.Spacing();
+
+		var itemSpacing = ImGui.GetStyle().ItemSpacing;
+
+		context.Max.y = ImGui.GetItemRectMax().y + itemSpacing.x;
+		context.Max.x = ImGui.GetWindowPos().x + ImGui.GetItemRectMax().x;
+		//context.Max.x = ImGui.GetWindowPos().x + ImGui.GetContentRegionAvail().x;
 
 		context.Splitter.SetCurrentChannel(context.DrawList, 0);
-
-		//var color = ImGui.GetColorU32(context == 0 ? .(0.30f, 0.1f, 0.1f, 0.7f) : .(0.30f, 0.30f, 0.1f, 0.7f));
 
 		context.DrawList.AddRectFilled(context.Min, context.Max, ImGui.GetColorU32(context.Color.Value));
 		context.Splitter.Merge(context.DrawList);
 
+		ImGui.Spacing();
+
 		ImGui.EndGroup();
+	}
+
+	public extension Color
+	{
+		public static operator uint32(ImGui.ImGui.Color val)
+		{
+			return RayToImGuiColorU32(val.Value);
+		}
 	}
 }
 
@@ -246,6 +277,11 @@ public extension Raylib
 
 extension Color
 {
+	public static operator Color(ImGui.ImGui.Color val)
+	{
+		return ImGuiToRayColor(val.Value);
+	}
+
 	public static operator Color(ImGui.ImGui.Vec4 val)
 	{
 		return ImGuiToRayColor(val);
@@ -255,6 +291,18 @@ extension Color
 	{
 		return RayToImGuiColor(val).Value;
 	}
+
+	public static operator ImGui.ImGui.Color(Color val)
+	{
+		return RayToImGuiColor(val);
+	}
+
+	/*
+	public static operator uint32(RaylibBeef.Color val)
+	{
+		return RayToImGuiColorU32(val);
+	}
+	*/
 }
 
 extension Vector2
