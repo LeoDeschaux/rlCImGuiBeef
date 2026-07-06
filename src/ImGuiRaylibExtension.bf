@@ -24,7 +24,7 @@ public extension ImGui
 		}
 	}
 
-	public static void PopFontSize()
+	public static void PopFontScale()
 	{
 		var io = ImGui.GetIO_Nil();
 		if(io.FontDefault != null)
@@ -231,20 +231,25 @@ public extension ImGui
 
 		ImGui.PopStyleColor(5);
 
-		ImGui.Spacing();
+		//ImGui.Spacing();
 
 		var itemSpacing = ImGui.GetStyle().ItemSpacing;
 
-		context.Max.y = ImGui.GetItemRectMax().y + itemSpacing.x;
-		context.Max.x = ImGui.GetWindowPos().x + ImGui.GetItemRectMax().x;
-		//context.Max.x = ImGui.GetWindowPos().x + ImGui.GetContentRegionAvail().x;
+		context.Max.y = ImGui.GetItemRectMax().y; // + itemSpacing.x;
+
+		//var maxA = ImGui.GetWindowPos().x + ImGui.GetItemRectMax().x;
+
+		var maxB = ImGui.GetWindowPos().x + ImGui.GetContentRegionAvail().x;
+		maxB += ImGui.GetStyle().WindowPadding.x;
+
+		context.Max.x = maxB;
 
 		context.Splitter.SetCurrentChannel(context.DrawList, 0);
 
 		context.DrawList.AddRectFilled(context.Min, context.Max, ImGui.GetColorU32(context.Color.Value));
 		context.Splitter.Merge(context.DrawList);
 
-		ImGui.Spacing();
+		//ImGui.Spacing();
 
 		ImGui.EndGroup();
 	}
